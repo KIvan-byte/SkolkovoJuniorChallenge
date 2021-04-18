@@ -29,7 +29,7 @@ def BuilderAnalytics(FILENAME):
     plt_output = plt.gcf()
     plt.show() # нужно будет убрать
     plt.draw() # нужно будет убрать
-    plt_output.savefig('NumberOfKeystrokes.png', dpi=100)
+    plt_output.savefig('NumberOfKeystrokes.png', dpi=100) #проверка
 
 if __name__ == '__main__':
     BuilderAnalytics('Head.csv')
