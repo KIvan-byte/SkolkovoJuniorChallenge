@@ -1,4 +1,5 @@
 import sys
+import recording
 from PySide6 import QtCore, QtWidgets, QtGui
 from keylogger import start_keylogger, stop
 import threading
@@ -11,7 +12,6 @@ class MyWidget(QtWidgets.QWidget):
         super().__init__()
         self.traker = False
         self.makeCSV()
-
         self.button = QtWidgets.QPushButton("Start")
         self.button2 = QtWidgets.QPushButton("Stop")
         self.text = QtWidgets.QLabel("Hello World")

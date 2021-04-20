@@ -7,7 +7,7 @@ stop_tracker = None
 
 
 def writeToCSV(fields):
-	with open(r'C:\Users\Maxim\Desktop\Skolkovo\keys.csv', 'a', newline='') as f:
+	with open('keys.csv', 'a', newline='') as f:
 		writer = csv.writer(f)
 		writer.writerow(fields)
 

