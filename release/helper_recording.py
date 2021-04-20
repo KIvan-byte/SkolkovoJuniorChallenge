@@ -1,9 +1,10 @@
 import cv2
 import pyautogui
 import numpy as np
+from Visualization import BuilderAnalytics, convertToCV2
 
 p = pyautogui.size()
-img1 = cv2.imread('csgo.jpg')
+img1 = cv2.imread('../csgo.jpg')
 # img2 = cv2.imread('hms_victory.jpg')
 
 def hconcat_resize(img_list,
@@ -27,8 +28,9 @@ def hconcat_resize(img_list,
 
 
 def makeOne(img):
-    img2 = cv2.cvtColor(np.array(img), cv2.COLOR_BGR2RGB)
-    img_h_resize = hconcat_resize([img2, img1])
+    image2 = convertToCV2(BuilderAnalytics("../Head.csv"))
+    image1 = cv2.cvtColor(np.array(img), cv2.COLOR_BGR2RGB)
+    img_h_resize = hconcat_resize([image1, image2])
     return cv2.resize(img_h_resize, p)
     # show the Output image
 # cv2.imshow('hconcat_resize.jpg', makeOne(pyautogui.screenshot()))
