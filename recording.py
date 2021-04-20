@@ -11,7 +11,7 @@ def recording():
     codec = cv2.VideoWriter_fourcc(*"XVID")
 
     # Specify name of Output file
-    filename = "Recording.avi"
+    filename = "__RECORDING__.avi"
 
     # Specify frames rate. We can choose any
     # value and experiment with it
@@ -43,7 +43,7 @@ def recording():
         out.write(frame)
 
         # Optional: Display the recording screen
-        # cv2.imshow('Live', frame)
+        cv2.imshow('Live', frame)
 
         # Stop recording when we press 'q'
         if cv2.waitKey(1) == ord('q'):

@@ -15,7 +15,8 @@ class MyWidget(QtWidgets.QWidget):
         self.button = QtWidgets.QPushButton("Start")
         self.button2 = QtWidgets.QPushButton("Stop")
         self.text = QtWidgets.QLabel("Hello World")
-
+        self.setWindowTitle('ProScience')
+        self.setWindowIcon(QtGui.QIcon('logo.png'))
         self.layout = QtWidgets.QVBoxLayout(self)
         self.layout.addWidget(self.text)
         self.layout.addWidget(self.button)
