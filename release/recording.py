@@ -14,7 +14,7 @@ def start_recording():
     resolution = (p[0],p[1]//2)
     codec = cv2.VideoWriter_fourcc(*"XVID")
     filename = "__RECORDING__.avi"
-    fps = 20.0
+    fps = 4.0
     out = cv2.VideoWriter(filename, codec, fps, resolution)
     while traker:
         img = helper_recording.makeOne(pyautogui.screenshot())

@@ -28,7 +28,7 @@ def hconcat_resize(img_list,
 
 
 def makeOne(img):
-    image2 = convertToCV2(BuilderAnalytics("../Head.csv"))
+    image2 = convertToCV2(BuilderAnalytics())
     image1 = cv2.cvtColor(np.array(img), cv2.COLOR_BGR2RGB)
     img_h_resize = hconcat_resize([image1, image2])
     return cv2.resize(img_h_resize, p)
