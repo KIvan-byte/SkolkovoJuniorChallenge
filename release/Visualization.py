@@ -20,7 +20,7 @@ def readCSV(filename):
             else:
                 Number_OF_Keystrokes[element] += 1
     return Number_OF_Keystrokes
-
+ # еуые
 def BuilderAnalytics():
     rcParams['figure.figsize'] = 16, 5 # редактирование размера изображения в дюймах, нужно как-то автоматом делать
     Number_OF_Keystrokes = readCSV('keys.csv')
