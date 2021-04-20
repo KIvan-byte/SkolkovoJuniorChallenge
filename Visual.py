@@ -1,7 +1,7 @@
 import sys
-import recording
+from recording import stop_recording, start_recording
 from PySide6 import QtCore, QtWidgets, QtGui
-from keylogger import start_keylogger, stop
+from keylogger import start_keylogger, stop_keylogger
 import threading
 import csv
 import os
@@ -31,16 +31,19 @@ class MyWidget(QtWidgets.QWidget):
             print('button')
             th = threading.Thread(target=start_keylogger, daemon=True)
             th.start()
+            record = threading.Thread(target=start_recording, daemon=True)
+            record.start()
 
 
     @QtCore.Slot()
     def stop(self):
-        stop()
+        stop_keylogger()
+        stop_recording()
 
 
 
     def closeEvent(self, event):
-        stop()
+        self.stop()
 
 
     def makeCSV(self):

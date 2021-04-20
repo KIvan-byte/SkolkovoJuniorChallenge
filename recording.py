@@ -2,58 +2,25 @@ import pyautogui
 import cv2
 import numpy as np
 import helper_recording
-# Specify resolution
-def recording():
+traker = True
+
+def stop_recording():
+    global traker
+    traker = False
+
+def start_recording():
+    print("start recording thread")
     p=pyautogui.size()
     resolution = (p[0],p[1]//2)
-
-    # Specify video codec
     codec = cv2.VideoWriter_fourcc(*"XVID")
-
-    # Specify name of Output file
     filename = "__RECORDING__.avi"
-
-    # Specify frames rate. We can choose any
-    # value and experiment with it
     fps = 20.0
-
-    # Creating a VideoWriter object
     out = cv2.VideoWriter(filename, codec, fps, resolution)
-
-    # Create an Empty window
-    # cv2.namedWindow("Live", cv2.WINDOW_NORMAL)
-
-    # Resize this window
-    # cv2.resizeWindow("Live", 480, 270)
-
-    while True:
-        # Take screenshot using PyAutoGUI
-        #img = pyautogui.screenshot()
+    while traker:
         img = helper_recording.makeOne(pyautogui.screenshot())
         img=cv2.resize(img, resolution)
-        # Convert the screenshot to a numpy array
         frame = np.array(img)
-        #
-        # frame = cv2.resize(frame, pyautogui.size())
-        # # Convert it from BGR(Blue, Green, Red) to
-        # # RGB(Red, Green, Blue)
-        # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-        # Write it to the output file
         out.write(frame)
-
-        # Optional: Display the recording screen
-        cv2.imshow('Live', frame)
-
-        # Stop recording when we press 'q'
-        if cv2.waitKey(1) == ord('q'):
-            break
-
-    # Release the Video writer
     out.release()
+    print("stop recording thread")
 
-    # Destroy all windows
-    cv2.destroyAllWindows()
-
-if __name__ == '__main__':
-    recording()
