@@ -3,7 +3,8 @@ import cv2
 import numpy as np
 import test2
 # Specify resolution
-resolution = pyautogui.size()
+p=pyautogui.size()
+resolution = (p[0],p[1]//2)
 
 # Specify video codec
 codec = cv2.VideoWriter_fourcc(*"XVID")
@@ -13,7 +14,7 @@ filename = "Recording.avi"
 
 # Specify frames rate. We can choose any
 # value and experiment with it
-fps = 60.0
+fps = 20.0
 
 # Creating a VideoWriter object
 out = cv2.VideoWriter(filename, codec, fps, resolution)
@@ -28,6 +29,7 @@ while True:
     # Take screenshot using PyAutoGUI
     #img = pyautogui.screenshot()
     img = test2.makeOne(pyautogui.screenshot())
+    img=cv2.resize(img, resolution)
     # Convert the screenshot to a numpy array
     frame = np.array(img)
     #
