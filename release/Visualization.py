@@ -50,6 +50,6 @@ def convertToCV2(fig):
 
 
 if __name__ == '__main__':
-    image = hr.makeOne(convertToCV2(BuilderAnalytics("Head.csv")))
+    image = hr.makeOne(convertToCV2(BuilderAnalytics("../Head.csv")))
     cv2.imshow('show.jpg', image)
     cv2.waitKey(0)
