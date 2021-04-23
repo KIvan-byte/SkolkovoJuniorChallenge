@@ -23,10 +23,7 @@ def microfone():
     ax[0].set_ylim(-5000,5000)
     ax[0].set_title("Raw Audio Signal")
     # Plot 1 is for the FFT of the audio
-    li2, = ax[1].plot(x, y)
-    ax[1].set_xlim(0,5000)
-    ax[1].set_ylim(-100,100)
-    ax[1].set_title("Fast Fourier Transform")
+
     # Show the plot, but without blocking updates
     plt.pause(0.01)
     plt.tight_layout()
@@ -64,8 +61,7 @@ def microfone():
         #print
         li.set_xdata(np.arange(len(audio_data)))
         li.set_ydata(audio_data)
-        li2.set_xdata(np.arange(len(dfft))*10.)
-        li2.set_ydata(dfft)
+
 
         # Show the updated plot, but without blocking
         plt.pause(0.01)

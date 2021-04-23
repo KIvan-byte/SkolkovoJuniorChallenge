@@ -21,6 +21,7 @@ def start_recording():
         img=cv2.resize(img, resolution)
         frame = np.array(img)
         out.write(frame)
+        # if the user clicks q, it exits
     out.release()
     print("stop recording thread")
 

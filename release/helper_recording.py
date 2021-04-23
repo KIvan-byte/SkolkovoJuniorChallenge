@@ -4,8 +4,6 @@ import numpy as np
 from Visualization import BuilderAnalytics, convertToCV2
 
 p = pyautogui.size()
-img1 = cv2.imread('../csgo.jpg')
-# img2 = cv2.imread('hms_victory.jpg')
 
 def hconcat_resize(img_list,
                    interpolation

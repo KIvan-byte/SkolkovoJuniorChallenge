@@ -1,6 +1,5 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import csv
 from pylab import rcParams
 import numpy as np
 import cv2
