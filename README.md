@@ -1,37 +1,24 @@
 # SkolkokoJuniorChallange
-Задание:
+Assignment:
 
-Вам необходимо разработать программное обеспечение для повышения информативности киберспортивных трансляций, согласно концепции, представленной в рамках первого этапа олимпиады.
-Программный продукт должен обрабатывать собираемые данные и на их основе получать показатели, которые затем будут визуализированы и встроены в киберспортивную трансляцию.
-Перед разработкой ознакомьтесь с техническими условиями и следуйте им.
+You need to develop software to increase the informativeness of cybersports broadcasts, according to the concept presented in the first stage of the Olympiad.
+The software product must process the collected data and on its basis obtain indicators that will be visualized and integrated into the cyber sports broadcast.
+Before developing, read and follow the specifications.
 
-Технические условия:
-1. Метрики должны рассчитываться достоверно (программа должна предусматривать обработку не менее 1000 показаний одного типа).
-2. Программа должна работать в течение не менее 5 минут без деградации производительности по времени (устойчиво работать, т.е. не иметь лагов/замедлений/потери данных, в течение 5 минутной игры/трансляции).
-3. OBS Studio можно использовать только для организации трансляции (или записи в файл), наложение визуализации на картинку игры необходимо реализовать вне OBS Studio.
-4. Получение данных - в варианте перехвата нажатий клавиш и курсора через функции WinAPI. Советуем придерживаться формата данных первого этапа.
-5. Обработка данных по мере поступления, расчет основных метрик для отображения.
-6. Наложение полученных метрик на изображение игры.
+Specifications:
+1. Metrics must be calculated reliably (the program must provide for the processing of at least 1000 readings of the same type).
+2. The program should run for at least 5 minutes without degradation of performance over time (work steadily, i.e. no lags/delays/data loss, during a 5 minute game/broadcast).
+3. OBS Studio can be used only for broadcasting (or recording to a file), overlay visualization on the picture of the game must be implemented outside of OBS Studio.
+4. Getting data - in the variant of capturing keystrokes and the cursor through the WinAPI functions. We advise you to stick to the data format of the first stage.
+5. Data processing as it comes, calculation of the main metrics for display.
+6. Overlaying the received metrics on the game image.
 
-Перед отправкой задания на проверку убедитесь, что Ваше решение работает не только на Вашем ПК, но и запускается на стороннем ПК. 
-После 10.04.2021, команды, при необходимости, могут прислать дополнительные вопросы разработчикам задания.
+Before sending the task for verification, make sure that your solution works not only on your PC, but also runs on a third-party PC. 
+After 10.04.2021, teams may send additional questions to the assignment developers, if necessary.
 
-Представитель команды должен направить жюри следующие файлы: 
+A team representative should send the following files to the jury: 
 
-1. Архив (в формате .zip) с разработанным программным продуктом и его исходным кодом.
-2. Инструкция по запуску программного продукта и компиляции файлов исходного кода (в формате .pdf)
-3. Видео с демонстрацией функционала программного продукта (в любом формате, например, avi, mp4 и др.).
-4. Инструкция пользователя (в формате .pdf) программного продукта.
-
- 
-Критерий и баллы:
-
-1. Соответствие реализации программного продукта концепции, предложенной в рамках первого этапа олимпиады -> 20
-2. Корректность работы функционала программного продукта -> 15
-3. Интерфейс программного продукта -> 15
-4. Стиль кода -> 10
-5. Соблюдение технических условий -> 15
-6. Уровень и проработка визуализации, встроенной в киберспортивную трансляцию -> 15
-7. Возможность масштабирования решения -> 10
-
-
+1. an archive (in .zip format) of the developed software product and its source code.
+2. instructions on how to launch the software product and compile the source code files (in .pdf format)
+3. Video demonstrating the functionality of the software product (in any format, for example, avi, mp4, etc.).
+4. User manual (in .pdf format) of the software product.
